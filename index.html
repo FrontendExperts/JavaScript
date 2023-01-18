@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <title>javascript</title>
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+<style type="text/css">
+  body {display: flex; position: relative; flex-direction: column; min-height: 100vh} 
+  .container {flex-grow: 1; height: 400px}
+  .footer {flex-shrink: 0}
+
+  .bg-primary {background-color: blueviolet;}
+  .text-white {color: #fff;}
+
+  .MyDiv {position: fixed; width: 600px; height: 400px; top: 20%; background-color: rebeccapurple; color: #fff; padding: 20px; left: 0; right: 0; margin: auto; display: none;}
+
+</style>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JavaScript</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <div class="container text-center my-5">
+      <h1>JavaScript Besic</h1>
+
+
+      <div class="card text-center my-5">
+        <div class="card-header">
+         New Delhi, India
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Date and Time</h5>
+          <p class="card-text">Current time is:<p class="my-5" id="timer"></p></p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+
+
+
+      <div id="HidDiv">
+        <p>Welcome to javaScript with this is pragraph</p>
+        <p>Arithmetic Operators</p>
+        <p>Assignment Operators</p>
+        <p>Comparison Operators</p>
+      </div>
+
+      <button id="MyButton" class="btn">click here</button>
+      <a href="javascript:void(0)" onclick="ShowHide()">Hide/Show</a>
+    </div>
+   
+    <p id="mydemo"></p>
+
+    <ul id="myList"></ul>
+
+ <p id="demo">
+
+       asdfasdfasdfadfadfa
+
+
+    </p>
+
+<div id="MyDiv" class="MyDiv">
+    <h1>This is window load Modal</h1>
+    <button onclick="hideDiv()" class="btn">close</button>
+    
+</div>
+
+
+<div class="footer text-center"><p>Copyright footer to javaScript with this is pragraph</p></div>
+
+    <!-- <div class="demo">
+    <p id="text">This is a paragraph</p>
+    <button onclick="msg()" type="button">button</button>
+</div>
+
+
+<div class="demo2">
+    <div>A:5</div>
+    <div>B: 10</div>
+    <div>C: 10*D2</div>
+    <div>D: 2</div>
+    <div>E: 0</div>
+    <p id="varDemo"></p> 
+</div>
+
+<div class="demo3">
+    <select id="mySelect" name="options">
+        <option>Select option</option>
+        <option value="0">0</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        
+    </select>
+    <p>Total Variable Size is: <span id="varShowOption"></span></p> 
+</div> -->
+
+    <!-- <div class="demo4">
+    <p>Demo 4 Oprators Like : <span id="demo4"></span></p> -->
+    <!-- <button onclick="Oprator()" type="button">button</button> -->
+    <!-- </div> -->
+
+    <div class="demo5">
+      <p id="forLoop"></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script src="javascript.js"></script> -->
+
+    <script type="text/javascript">
+      // start demo
+      /*  function msg() {
+        document.getElementById('text').innerHTML = "Hello Javascript"
+    }
+
+
+    // start demo 2
+    const a = 5;
+    const b = 10;
+    const c = 10;
+    const d = 2;
+    const e = 0;
+    const z = a + b + (c * d) + e; 
+    document.getElementById('varDemo').innerHTML = "Total Variable Size is: "  + z;
+
+
+     // start demo 3
+     function ShowSelectOption() {
+        var item = document.getElementById('mySelect').value;
+        document.getElementById('varShowOption').innerHTML = item;
+    }
+     document.getElementById("mySelect").addEventListener("change", ShowSelectOption);
+
+
+    // start demo 4 Operators
+     let x = 45;  
+     let y = 5;
+     document.getElementById('demo4').innerHTML = x ('<br />'), y ('<br />') ;
+     console.log('x + y = ', x+y);
+     console.log('x - y = ', x-y);
+     console.log('x / y = ', x/y);
+     console.log('x * y = ', x*y); */
+
+      // start demo 5 Operators
+      //  let text = '';
+      //     for (let i = 5; i <41; i++){
+      //         text += i + '<br />'
+      //     }
+      // document.getElementById('forLoop').innerHTML = text;
+
+      // 1. Ways to print in JavaScript
+      // console.log("hello world");
+      //alert("test");
+    //  document.write("this is document write");
+
+      // 2. JavaScript Console API
+      // console.warn("this is warning");
+      // console.error("this is error");
+      // console.clear();
+
+      // 3. JavaScript Variables
+      // What are Variables ? - Container to store data vlue
+
+      // 4. Data types in JavaScript
+      // Number
+      var Num1 = 54;
+      var Num2 = 50.5;
+
+      // String
+      var str1 = "This is a string";
+      var str2 = "This is also string";
+      // console.log(marks);
+
+      // Objects
+      var marks = {
+        Ravi: 45,
+        Mukesh: 34,
+        Rahul: 25,
+      }
+
+      // Booleans
+      // var a = true;
+      // var b = false;
+
+      //console.log(Num1 + Num2, str1, str2, marks, a, b);
+
+      // und
+      // var ss = undefined;
+      // var nul = null;
+
+      //console.log(ss, nul);
+
+      // var a = 50;
+      // var b = 10;
+
+      // var z = b;
+      //   z += 2;
+      //   z -= 2;
+      // z -= 2;
+      //   z *= 2;
+      //  z /= 2;
+
+      //console.log(z);
+
+      // var x = 30;
+      // var y = 75;
+      // console.log(x == y);
+      // console.log(x <= y);
+      // console.log(x >= y);
+      // console.log(x < y);
+      // console.log(x > y);
+
+      //logical and
+      // console.log( true && true);
+      // console.log( false && true);
+      // console.log( true  && false);
+      // console.log( false  && false);
+
+      //logical or
+      // console.log( true || true);
+      // console.log( false || true);
+      // console.log( true  || false);
+      // console.log( false  || false);
+
+      //logical not
+      // console.log( ! true);
+      // console.log( ! false);
+
+      // Function in JavaScript
+      // Dry = Do not repeat yourself (using by invok)
+      // function avg(a, b){
+      //     c = (a + b)/2;
+      //     return c;
+      // }
+
+      // c1 = avg(20, 10);
+      // c2 = avg(16, 25);
+
+      // console.log(c1, c2);
+
+      // Conditionals in JavaScript
+      // var age = 25;
+      // if (age > 18) {
+      //   console.log("you are not a kid");
+      // } else {
+      //   console.log("you are a kid");
+      // }
+
+      // if or else conditionals in JavaScript
+      // function ShowHide() {
+      //   var x = document.getElementById("HidDiv");
+      //   {
+      //     if (x.style.display === "none") {
+      //       x.style.display = "block";
+      //     } else {
+      //       x.style.display = "none";
+      //     }
+      //   }
+      // }
+
+// Loop in JavaScript
+    //   var arr = [1, 2, 3, 4, 5, 6, 7];
+    //   var text = "";
+    //   for (var i = 0; i < arr.length; i++) {
+    //     text += i + "<li>";
+    //   }
+    //   document.getElementById("myList").innerHTML = text;
+
+      // arr.forEach(function(element) {
+      // console.log(element);
+      // });
+      // document.getElementById("mydemo2").innerHTML = text;
+
+      // or
+
+      // var arr = [1, 2, 3, 4, 5, 6, 7];
+      // let list = document.getElementById("myList");
+      // arr.forEach((item)=>{
+      //   let li = document.createElement("li");
+      //   li.innerText = item;
+      //   list.appendChild(li);
+      // })
+
+
+// break or continue statement using loop in Javascript
+    //   var arr = [1, 2, 3, 4, 5, 6, 7];
+    //   var text = "";
+    //   for (var i = 0; i < arr.length; i++) {
+    //     if (i === 3) {
+    //       break; // break / continue
+    //     }
+    //     text += i + "<li>";
+    //   }
+    //   document.getElementById("myList").innerHTML = text;
+
+
+    //   let text = "";
+    //   for (let i = 0; i < 10; i++) {
+    //     if (i === 3) {
+    //       break; // break / continue
+    //     }
+    //     text += i + "<li>";
+    //   }
+    //   document.getElementById("myList").innerHTML = text;
+
+
+
+// Switch Statement expression using like loop in Javascript
+// let myDay = 2;
+// switch (myDay) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//     day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case  6:
+//     day = "Saturday";
+//     break;
+//    default: document.write ('Today is not');
+
+  
+// }
+// document.getElementById("demo").innerHTML = "Today is " + day;
+  
+  
+// Array Methods in Javascript
+//let myArr = ["Fan", "Camera", 34, null, true];
+// Array Methods
+// console.log(myArr.length);
+// myArr.pop();
+// myArr.push("harry")
+// myArr.shift()
+// const newLen = myArr.unshift("Harry")
+// console.log(newLen);
+// console.log(myArr);
+
+// let text =  "Shakir is a good boy and developer";
+// d = text.slice(0, 20);
+//  document.getElementById("demo").innerHTML = d + text;
+ 
+
+// DOM Manupulation 
+// let elemClass = document.getElementsByClassName("footer");
+// elemClass[0].classList.add("bg-primary");
+// elemClass[0].classList.remove("bg-primary");
+
+// let elem = document.getElementById("HidDiv");
+// elemClass.classList.add("bg-primary");
+
+
+
+// function fun() {  
+// var a = document.getElementById("demo");  
+// a.className = "bg-primary";  
+// }  
+
+
+// Pre = () => {
+
+
+// SetTimeout and setinterval 
+// Pre = ()=> {
+//   document.getElementById("demo").innerHTML = "<b> Set Interval and Settimeout</b>";  
+//   // console.log("Set Interval and Settimeout")
+// }
+// for one time setTimeout 
+// setTimeout(Pre, 2000);
+
+// for continue.. setinterval for always 
+// setInterval(Pre, 5000);
+
+// Stop setTimeout and setinterval 
+// clr = setInterval(Pre, 5000);
+// clr = setTimeout(Pre, 2000);
+
+
+
+// Date and time using JavaScript 
+  let t;
+  let date;
+  let time;
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  
+  setInterval(() => {
+  t = new Date();
+  date = t.toLocaleDateString(undefined, options);
+
+  time = t.getHours() + ':' + t.getMinutes() + ':' + t.getSeconds();
+  time = t.toLocaleTimeString('en-US');  // for am/pm 
+  document.getElementById("timer").innerHTML = time + "<br> on " + date; 
+ }, 1000);
+
+
+
+
+// Query Selector using JavaScript 
+ var element; 
+//  element = document.querySelectorAll("#HidDiv p")[1].innerHTML = "<h1>This is New Heading</h1>";
+    element = document.querySelectorAll("#HidDiv p")[3];
+    element.classList.add("bg-primary")
+
+
+// Window Onload by JavaScript 
+    window.onload = function() {
+      document.getElementById("MyDiv").style.display = "block";
+    }
+    function hideDiv() {
+      document.getElementById("MyDiv").style.display = 'none';    
+    } 
+
+
+// Json using by JavaScript 
+obj = {name: "shakir", length: "1", age: "30",  locations: {first: "Mumbai", second: "Jaipur"}}
+jso = JSON.stringify(obj);
+console.log(typeof jso);
+console.log(jso)
+
+parsed = JSON.parse(`{"name": "shakir", "length": "1", "age": "30",  "locations": {"first": "Mumbai", "second": "Jaipur"}}`)
+console.log(parsed);
+
+
+</script>
+
+
+
+
+  </body>
+</html>
